@@ -4,46 +4,234 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - SDN Kakatua</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fff8f0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #5e0000, #800000, #a00000);
+      padding: 12px 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #FFD700 !important;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .navbar-brand:hover {
+      color: #fff !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: #FFD700 !important;
+      font-weight: 600;
+      margin-left: 18px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: #FFD700;
+      transition: width 0.3s ease-in-out;
+      border-radius: 2px;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: white !important;
+    }
+
+    #about {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #about h2 {
+      color: #800000;
+      font-weight: 700;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    #about p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .member-card {
+      background: linear-gradient(145deg, #fff, #ffe6b3);
+      border: 2px solid #800000;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .member-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(128, 0, 0, 0.4);
+    }
+
+    .member-card img {
+      border-radius: 50%;
+      border: 4px solid #FFD700;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .member-card p {
+      font-size: 16px;
+      color: #800000;
+      font-weight: 500;
+    }
+
+    .btn-maroon {
+      background-color: #800000;
+      color: #FFD700;
+      border: 2px solid #FFD700;
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 8px 20px;
+      transition: 0.3s;
+    }
+
+    .btn-maroon:hover {
+      background-color: #FFD700;
+      color: #800000;
+      border: 2px solid #800000;
+    }
+
+    footer {
+      background-color: #800000;
+      color: #FFD700;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      font-weight: 500;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-brand {
+        margin: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <h2>MENU</h2>
-    <a href="index.html">Home</a>
-    <a href="profil.html">Profil Sekolah</a>
-    <a href="kegiatan.html">Kegiatan</a>
-    <a href="kontak.html">Kontak</a>
-    <a href="about.html">About Us</a>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">SDN Kakatua</a>
+
+      <button class="navbar-toggler text-warning border-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="profil.html">Profil Sekolah</a></li>
+          <li class="nav-item"><a class="nav-link" href="kegiatan.html">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <main>
-    <section id="about">
+    <section id="about" class="container">
       <h2>About Us</h2>
       <p>Website ini dibuat oleh kelompok kami yang terdiri dari 6 orang:</p>
-      <div>
-        <p><b>Nama:</b> Muhammad Ghazi Saputra<br><b>NIM:</b> 240209501063</p>
-        <img src="pict/ghazi.jpg" alt="Muhammad Ghazi Saputra" width="150"><br><br>
 
-        <p><b>Nama:</b> Nabilah Auliah Rahman<br><b>NIM:</b> 240209500055</p>
-        <img src="pict/ila.jpg" alt="Nabilah Auliah Rahman" width="150"><br><br>
+      <div class="row justify-content-center">
 
-        <p><b>Nama:</b> Andi Fahril S<br><b>NIM:</b> 240209501055</p>
-        <img src="pict/fahril.jpg" alt="Andi Fahril S" width="150"><br><br>
+        <!-- GHAZI -->
+        <div class="col-md-4 member-card">
+          <img src="pict/ghazi.jpg" alt="Muhammad Ghazi Saputra">
+          <p><b>Nama:</b> Muhammad Ghazi Saputra<br><b>NIM:</b> 240209501063</p>
+          <a href="https://muhammadghazisaputra.github.io/PRAKTIKUM-4/PRAKTIKUM%202/TUGAS/artikel.html" 
+             target="_blank" class="btn btn-maroon">Lihat Artikel</a>
+        </div>
 
-        <p><b>Nama:</b> Rizki Anhar<br><b>NIM:</b> 240209500078</p>
-        <img src="pict/kiki.jpg" alt="Rizki Anhar" width="150"><br><br>
+        <!-- NABILAH -->
+        <div class="col-md-4 member-card">
+          <img src="pict/ila.jpg" alt="Nabilah Auliah Rahman">
+          <p><b>Nama:</b> Nabilah Auliah Rahman<br><b>NIM:</b> 240209500055</p>
+          <a href="https://nabilaauliaar.github.io/PRAKTIKUM-4/Praktikum-4/Tugas-2/artikel.html" 
+             target="_blank" class="btn btn-maroon">Lihat Artikel</a>
+        </div>
 
-        <p><b>Nama:</b> Adelia Rahmadani Tahir<br><b>NIM:</b> 240209500075</p>
-        <img src="pict/adel.jpg" alt="Adelia Rahmadani Tahir" width="150"><br><br>
+        <!-- FAHRIL -->
+        <div class="col-md-4 member-card">
+          <img src="pict/fahril.jpg" alt="Andi Fahril S">
+          <p><b>Nama:</b> Andi Fahril S<br><b>NIM:</b> 240209501055</p>
+          <a href="https://andifahril-hub.github.io/Praktikum4/PRAKTIKUM%204/TUGAS/artikel.html"
+             target="_blank" class="btn btn-maroon">Lihat Artikel</a>
+        </div>
 
-        <p><b>Nama:</b> Andi Imam Ardiansyah<br><b>NIM:</b> 240209501047</p>
-        <img src="pict/imam.jpg" alt="Andi Imam Ardiansyah" width="150"><br><br>
+        <!-- RIZKI -->
+        <div class="col-md-4 member-card">
+          <img src="pict/kiki.jpg" alt="Rizki Anhar">
+          <p><b>Nama:</b> Rizki Anhar<br><b>NIM:</b> 240209500078</p>
+        </div>
+
+        <!-- ADELIA -->
+        <div class="col-md-4 member-card">
+          <img src="pict/adel.jpg" alt="Adelia Rahmadani Tahir">
+          <p><b>Nama:</b> Adelia Rahmadani Tahir<br><b>NIM:</b> 240209500075</p>
+          <a href="https://adeliarahmadanitahirr-stack.github.io/Praktikum-4/PRAKTIKUM%204/tugas2/artikel.html"
+             target="_blank" class="btn btn-maroon">Lihat Artikel</a>
+        </div>
+
+        <!-- IMAM -->
+        <div class="col-md-4 member-card">
+          <img src="pict/imam.jpg" alt="Andi Imam Ardiansyah">
+          <p><b>Nama:</b> Andi Imam Ardiansyah<br><b>NIM:</b> 240209501047</p>
+          <a href="https://andiimamardiansyah-debug.github.io/praktikum4/tugas%20bootstrap/index.html/artikel.html" 
+             target="_blank" class="btn btn-maroon">Lihat Artikel</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <small><p>&copy; 2025 UPT SPF SDN Kakatua <a href="#">Kembali Ke Atas</a></p></small>
+    <small><p>&copy; 2025 UPT SPF SDN Kakatua | <a href="#">Kembali Ke Atas</a></p></small>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
