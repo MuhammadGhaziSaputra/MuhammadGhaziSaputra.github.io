@@ -4,43 +4,261 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil - SDN Kakatua</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fff;
+      font-family: "Poppins", sans-serif;
+      color: #333;
+    }
+
+    nav.navbar {
+      background-color: #800000;
+    }
+    .navbar-brand, .nav-link {
+      color: #FFD700 !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(128, 0, 0, 0.6), rgba(128, 0, 0, 0.6)),
+                  url('pict/sekolah-banner.jpg') center/cover no-repeat;
+      color: #FFD700;
+      text-align: center;
+      padding: 130px 20px;
+      background-attachment: fixed;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    .btn-gold {
+      background-color: #FFD700;
+      color: #800000;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: #e5c100;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    #profil h2 {
+      color: #800000;
+      font-weight: 700;
+      border-left: 6px solid #FFD700;
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+
+    .visi-misi-box {
+      background: #fff8e1;
+      border-left: 6px solid #800000;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(128, 0, 0, 0.15);
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+    .visi-misi-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(128, 0, 0, 0.25);
+    }
+    .visi-misi-box h4 {
+      color: #800000;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .visi-misi-box p {
+      color: #333;
+      line-height: 1.7;
+    }
+    .visi-misi-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .visi-misi-box ul li {
+      background: #fff;
+      border: 1px solid #FFD700;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      color: #800000;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .visi-misi-box ul li:hover {
+      background: #FFD700;
+      color: #800000;
+      transform: scale(1.02);
+    }
+
+    .facility-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+    .facility-section h3 {
+      color: #800000;
+      font-weight: 700;
+      border-bottom: 3px solid #FFD700;
+      display: inline-block;
+      padding-bottom: 8px;
+      margin-bottom: 35px;
+    }
+    .facility-card {
+      background: #fff;
+      border: 2px solid #FFD700;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(128, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .facility-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(128, 0, 0, 0.3);
+      border-color: #800000;
+    }
+    .facility-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .facility-card h5 {
+      background-color: #800000;
+      color: #FFD700;
+      padding: 10px;
+      margin: 0;
+      font-weight: 600;
+      border-top: 2px solid #FFD700;
+    }
+
+    footer {
+      background-color: #800000;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #FFD700;
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <h2>MENU</h2>
-    <a href="index.html">Home</a>
-    <a href="profil.html">Profil Sekolah</a>
-    <a href="kegiatan.html">Kegiatan</a>
-    <a href="kontak.html">Kontak</a>
-    <a href="about.html">About Us</a>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">SDN Kakatua</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="profil.html">Profil Sekolah</a></li>
+          <li class="nav-item"><a class="nav-link" href="kegiatan.html">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section id="profil">
-      <h2>Profil Sekolah</h2>
-      <h3>Visi dan Misi</h3>
-      <p><b>Visi:</b> Mewujudkan Warga Sekolah Yang Unggul Imtaq, Iptek, Dan Pengembangan Kreativitas Diri Serta Berperilaku Peduli Dan Sadar Lingkungan.</p>
-      <p><b>Misi:</b></p>
-      <ul>
-        <li>Melaksanakan pembelajaran dan bimbingan secara efektif dan inovatif berdasarkan IMTAQ dan IPTEK yang ada.</li>
-        <li>Menumbuhkan kreativitas diri terhadap budaya bangsa melalui kegiatan ekstra kurikuler.</li>
-        <li>Membiasakan hidup sehat dan peduli untuk memelihara kelangsungan sekolah dan masyarakat sebagai bagian dari kehidupan.</li>
-        <li>Menumbuhkan dan melaksanakan pelestarian lingkungan, mencegah terjadinya pencemaran serta peduli terhadap lingkungan.</li>
-        <li>Membudayakan pemilahan sampah yang berbeda dan sampah plastik sebagai upaya perlindungan lingkungan terhadap kerusakan.</li>
-        <li>Mengembangkan sekolah yang rindang, indah, bersih dan asri sebagai upaya pelestarian dan pengelolaan lingkungan hidup yang baik.</li>
-      </ul>
+  <section class="hero">
+    <div class="container">
+      <h1>Selamat Datang di SDN Kakatua</h1>
+      <p>Mengembangkan potensi peserta didik melalui pendidikan yang berkarakter, kreatif, dan peduli lingkungan.</p>
+      <a href="#profil" class="btn-gold">Jelajahi Profil Sekolah</a>
+    </div>
+  </section>
 
-      <h3>Fasilitas</h3>
-      <ul>
-        <li>Ruang Kelas<br><img src="pict/ruang-kelas.jpg" alt="Ruang Kelas" width="250"></li>
-        <li>Lapangan<br><img src="pict/lapangan.jpg" alt="Lapangan" width="250"></li>
-        <li>Perpustakaan<br><img src="pict/perpustakaan.jpg" alt="Perpustakaan" width="250"></li>
-      </ul>
+  <main class="container mt-5 pt-3">
+    <section id="profil">
+      <div class="text-center mb-5">
+        <h2>Profil Sekolah</h2>
+        <p class="text-secondary">
+          SDN Kakatua merupakan sekolah dasar negeri yang berkomitmen untuk mencetak generasi yang tidak hanya unggul dalam pengetahuan dan keterampilan,
+          tetapi juga berakhlak mulia, cinta budaya, serta peduli terhadap kelestarian lingkungan.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="visi-misi-box">
+            <h4>Visi</h4>
+            <p><em>“Mewujudkan warga sekolah yang unggul dalam IMTAQ, IPTEK, dan pengembangan kreativitas diri serta berperilaku peduli dan sadar lingkungan.”</em></p>
+          </div>
+          <div class="visi-misi-box">
+            <h4>Misi</h4>
+            <ul>
+              <li>Melaksanakan pembelajaran yang aktif, kreatif, efektif, dan menyenangkan berbasis IMTAQ dan IPTEK.</li>
+              <li>Menumbuhkan semangat berprestasi dan rasa cinta terhadap budaya bangsa melalui kegiatan ekstrakurikuler.</li>
+              <li>Mendorong kebiasaan hidup sehat, bersih, dan disiplin di lingkungan sekolah.</li>
+              <li>Menumbuhkan kepedulian terhadap kebersihan dan pelestarian lingkungan.</li>
+              <li>Membudayakan program pemilahan sampah dan pengelolaan lingkungan berkelanjutan.</li>
+              <li>Mewujudkan lingkungan sekolah yang hijau, rindang, indah, dan nyaman untuk belajar.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="facility-section">
+        <h3>Fasilitas Sekolah</h3>
+        <p class="text-secondary mb-4">
+          SDN Kakatua menyediakan berbagai fasilitas yang mendukung kegiatan belajar mengajar agar peserta didik dapat belajar dengan nyaman, aman, dan menyenangkan.
+        </p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-3 col-6">
+            <div class="facility-card">
+              <img src="pict/ruang-kelas.jpg" alt="Ruang Kelas">
+              <h5>Ruang Kelas Nyaman</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="facility-card">
+              <img src="pict/lapangan.jpg" alt="Lapangan">
+              <h5>Lapangan Serbaguna</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="facility-card">
+              <img src="pict/perpustakaan.jpg" alt="Perpustakaan">
+              <h5>Perpustakaan Sekolah</h5>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <small><p>&copy; 2025 UPT SPF SDN Kakatua <a href="#">Kembali Ke Atas</a></p></small>
+    <p>&copy; 2025 UPT SPF SDN Kakatua | <a href="#">Website Resmi Sekolah</a></p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
