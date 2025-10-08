@@ -4,60 +4,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kegiatan - SDN Kakatua</title>
+
+
+  <link rel="stylesheet" href="bootstrap-5.3.8/css/bootstrap.min.css">
+
+  
+  <style>
+  
+    :root {
+      --maroon: #800000;
+      --gold: #FFD700;
+      --gold-light: #fff4b0;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      font-family: "Poppins", sans-serif;
+    }
+
+    
+    .navbar {
+      background: linear-gradient(90deg, var(--maroon), #5c0000);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .navbar-brand {
+      color: var(--gold) !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.3rem;
+    }
+    .navbar-nav .nav-link {
+      color: var(--gold) !important;
+      font-weight: 500;
+      margin-left: 15px;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: var(--gold-light) !important;
+    }
+
+    
+    .hero {
+      background: linear-gradient(rgba(128,0,0,0.6), rgba(128,0,0,0.6)),
+                  url('galeri1.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      border-radius: 0 0 25px 25px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    
+    .card-kegiatan {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-kegiatan:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .card-kegiatan img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body h5 {
+      color: var(--maroon);
+      font-weight: 600;
+    }
+
+    
+    .galeri img {
+      border-radius: 10px;
+      border: 3px solid var(--maroon);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .galeri img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      border: 4px solid var(--gold);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+  
+    footer {
+      background: var(--maroon);
+      color: var(--gold);
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+      border-top: 4px solid var(--gold);
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <h2>MENU</h2>
-    <a href="index.html">Home</a> 
-    <a href="profil.html">Profil Sekolah</a> 
-    <a href="kegiatan.html">Kegiatan</a> 
-    <a href="kontak.html">Kontak</a> 
-    <a href="about.html">About Us</a>
+  
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SDN Kakatua</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kegiatan.html">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section id="kegiatan">
-      <h2>Kegiatan</h2>
-      <p>Sekolah kami menyediakan berbagai kegiatan ekstrakurikuler, di antaranya:</p>
+  
+  <section class="hero">
+    <h1>Kegiatan Ekstrakurikuler</h1>
+    <p>SDN Kakatua memberikan berbagai kegiatan menarik untuk menumbuhkan bakat dan kreativitas siswa di bidang akademik maupun non-akademik.</p>
+  </section>
 
-      <ul>
-        <li>
-          Pramuka<br>
-          <img src="pict/pramuka.jpg" alt="Kegiatan Pramuka di SDN Kakatua" width="250">
-        </li>
-        <li>
-          Drumband<br>
-          <img src="pict/drumband.jpg" alt="Kegiatan Drumband di SDN Kakatua" width="250">
-        </li>
-      </ul>
-
-      <h3>Galeri Sekolah</h3>
-      <div>
-        <img src="pict/galeri1.jpg" alt="Tampak Luar Sekolah" width="250">
-        <img src="pict/galeri2.jpg" alt="Tampak Dalam Sekolah" width="250">
-        <img src="pict/galeri3.jpg" alt="Kegiatan Sekolah 1" width="250">
-        <img src="pict/galeri4.jpg" alt="Kegiatan Sekolah 2" width="250">
-        <img src="pict/galeri5.jpg" alt="Kegiatan Sekolah 3" width="250">
-        <img src="pict/galeri6.jpg" alt="Kegiatan Sekolah 4" width="250">
-        <img src="pict/galeri7.jpg" alt="Kegiatan Sekolah 5" width="250">
+  
+  <main class="container my-5">
+    <!-- Kegiatan Cards -->
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card card-kegiatan">
+          <img src="pramuka.jpg" class="card-img-top" alt="Pramuka">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pramuka</h5>
+            <p class="card-text">Kegiatan Pramuka melatih kemandirian, kedisiplinan, dan kebersamaan di alam terbuka.</p>
+          </div>
+        </div>
       </div>
 
-      <h3>Video Kegiatan</h3>
-      <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/tHQETbOYVKk?si=p2fjMgddbTtzijRS" 
-        title="Video Kegiatan SDN Kakatua"
-        frameborder="0" 
-        allowfullscreen>
-      </iframe>
-    </section>
+      <div class="col-md-6">
+        <div class="card card-kegiatan">
+          <img src="drumband.jpg" class="card-img-top" alt="Drumband">
+          <div class="card-body text-center">
+            <h5 class="card-title">Drumband</h5>
+            <p class="card-text">Ekstrakurikuler Drumband menumbuhkan jiwa seni musik dan kekompakan dalam tim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <h2 class="text-center mt-5 mb-4">Galeri Sekolah</h2>
+    <div class="row galeri g-3">
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri1.jpg" alt="Tampak Luar" class="img-fluid shadow-sm">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri2.jpg" alt="Tampak Dalam" class="img-fluid shadow-sm">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri3.jpg" alt="Kegiatan 1" class="img-fluid shadow-sm">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri4.jpg" alt="Kegiatan 2" class="img-fluid shadow-sm">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri5.jpg" alt="Ekstrakurikuler 1" class="img-fluid shadow-sm">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri6.jpg" alt="Ekstrakurikuler 2" class="img-fluid shadow-sm">
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="galeri7.jpg" alt="Kegiatan 3" class="img-fluid shadow-sm">
+      </div>
+    
+    <h2 class="text-center mt-5 mb-4">Video Kegiatan</h2>
+    <div class="video-container">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/tHQETbOYVKk?si=p2fjMgddbTtzijRS"
+                title="Video Kegiatan SDN Kakatua"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </main>
 
+  
   <footer>
-    <small>
-      <p>&copy; 2025 UPT SPF SDN Kakatua | <a href="#">Kembali Ke Atas</a></p>
-    </small>
+    <p>&copy; 2025 UPT SPF SDN Kakatua | <a href="#">Kembali ke Atas</a></p>
   </footer>
+
+
+  <script src="bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
